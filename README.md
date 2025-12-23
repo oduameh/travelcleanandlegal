@@ -1,10 +1,10 @@
-# JapaWise - Nigerian Emigration Guide
+# Travel Clean & Legal - Nigerian Emigration Guide
 
 Your complete guide to relocating from Nigeria. Expert advice on visas, immigration, and building a new life abroad.
 
 ## 🌍 About
 
-JapaWise is a comprehensive resource for Nigerians looking to relocate internationally. We cover:
+Travel Clean & Legal is a comprehensive resource for Nigerians looking to relocate internationally. We cover:
 
 - **UK Immigration**: Skilled Worker Visa, Care Worker Visa, Student Visa, and more
 - **Canada Immigration**: Express Entry, Study Permits, PNPs
