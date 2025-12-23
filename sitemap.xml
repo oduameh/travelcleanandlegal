@@ -1,73 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
-    <loc>https://travelcleanandlegal.com/</loc>
+    <loc>https://japawise.com/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Blog Index -->
   <url>
-    <loc>https://travelcleanandlegal.com/blog.html</loc>
+    <loc>https://japawise.com/blog.html</loc>
     <lastmod>2025-01-15</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- About Page -->
   <url>
-    <loc>https://travelcleanandlegal.com/about.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://japawise.com/about.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Contact Page -->
   <url>
-    <loc>https://travelcleanandlegal.com/contact.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://japawise.com/contact.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Articles -->
+  <!-- UK Articles -->
   <url>
-    <loc>https://travelcleanandlegal.com/posts/budget-europe-2025.html</loc>
+    <loc>https://japawise.com/posts/uk-skilled-worker-visa-nigeria-2025.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://travelcleanandlegal.com/posts/travel-insurance-guide.html</loc>
-    <lastmod>2025-01-12</lastmod>
+    <loc>https://japawise.com/posts/uk-care-worker-visa-nigeria-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://travelcleanandlegal.com/posts/pack-light-guide.html</loc>
-    <lastmod>2025-01-10</lastmod>
+    <loc>https://japawise.com/posts/uk-student-visa-nigeria-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://travelcleanandlegal.com/posts/morning-routines-remote-workers.html</loc>
-    <lastmod>2025-01-08</lastmod>
+    <loc>https://japawise.com/posts/how-to-get-job-uk-nigeria.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
-    <loc>https://travelcleanandlegal.com/posts/visa-requirements-digital-nomads.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <loc>https://japawise.com/posts/uk-dependent-visa-families-nigeria.html</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Note: Privacy and Terms pages are noindex, so not included in sitemap -->
+  <url>
+    <loc>https://japawise.com/posts/open-uk-bank-account-nigeria.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/uk-accommodation-new-arrivals-nigeria.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/uk-cv-guide-nigerians.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Canada Articles -->
+  <url>
+    <loc>https://japawise.com/posts/canada-express-entry-nigeria-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/canada-study-permit-nigerians-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Germany Articles -->
+  <url>
+    <loc>https://japawise.com/posts/germany-opportunity-card-nigeria-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Other Countries -->
+  <url>
+    <loc>https://japawise.com/posts/australia-skilled-migration-nigerians-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/usa-visa-nigerians-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/nigeria-to-ireland-work-visa-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Healthcare -->
+  <url>
+    <loc>https://japawise.com/posts/nursing-abroad-nigerian-nurses-guide.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/nmc-cbt-osce-nigerian-nurses-guide.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- IELTS -->
+  <url>
+    <loc>https://japawise.com/posts/ielts-preparation-nigeria-complete-guide.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/ielts-vs-pte-nigerians.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Study & Scholarships -->
+  <url>
+    <loc>https://japawise.com/posts/masters-abroad-nigeria-scholarships-2025.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Tech -->
+  <url>
+    <loc>https://japawise.com/posts/tech-jobs-abroad-nigerian-developers.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Planning & Finances -->
+  <url>
+    <loc>https://japawise.com/posts/proof-of-funds-visa-application-nigeria.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/cost-of-living-abroad-nigerian-comparison.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/how-much-save-before-relocating-nigeria.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/best-cities-nigerians-abroad.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://japawise.com/posts/common-visa-mistakes-nigerians.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
-

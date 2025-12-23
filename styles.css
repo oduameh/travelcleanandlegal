@@ -1,6 +1,6 @@
 /* ============================================
-   Travel, Clean & Legal - Main Stylesheet
-   A distinctive, professional blog design
+   JapaWise - Nigerian Emigration Guide
+   Your Trusted Guide to Relocating Abroad
    ============================================ */
 
 /* CSS Custom Properties (Design Tokens) */
@@ -10,30 +10,30 @@
   --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
-  /* Color Palette - Warm, Travel-Inspired */
-  --color-primary: #1a3a2f;        /* Deep forest green */
-  --color-primary-light: #2d5a47;  /* Lighter forest */
-  --color-accent: #c4704b;         /* Terracotta/burnt sienna */
-  --color-accent-light: #d4896b;   /* Light terracotta */
-  --color-accent-subtle: #f5ebe6; /* Cream with warmth */
+  /* Color Palette - Nigerian Green & Modern */
+  --color-primary: #008751;        /* Nigerian green */
+  --color-primary-light: #00a86b;  /* Lighter green */
+  --color-accent: #1e3a5f;         /* Deep navy blue */
+  --color-accent-light: #2d5a8a;   /* Lighter navy */
+  --color-accent-subtle: #e8f4f0;  /* Light mint */
   
   /* Neutrals */
-  --color-bg: #faf8f5;             /* Warm off-white */
-  --color-bg-alt: #f2ede6;         /* Slightly darker warm */
+  --color-bg: #f8faf9;             /* Clean off-white */
+  --color-bg-alt: #f0f4f2;         /* Slightly darker */
   --color-surface: #ffffff;        /* Pure white for cards */
-  --color-border: #e5ddd3;         /* Warm border */
-  --color-border-light: #f0e9e0;   /* Lighter border */
+  --color-border: #d4e0da;         /* Soft green border */
+  --color-border-light: #e8f0ec;   /* Lighter border */
   
   /* Text Colors */
-  --color-text: #2c2c2c;           /* Near black for readability */
-  --color-text-muted: #6b635a;     /* Warm gray */
-  --color-text-light: #9a918a;     /* Light warm gray */
+  --color-text: #1a1a1a;           /* Near black for readability */
+  --color-text-muted: #5a6b62;     /* Muted green-gray */
+  --color-text-light: #8a9a92;     /* Light gray-green */
   --color-text-inverse: #ffffff;   /* White text */
   
   /* Semantic Colors */
-  --color-success: #2d7a4f;
-  --color-warning: #d4a84b;
-  --color-error: #c4574b;
+  --color-success: #008751;
+  --color-warning: #e6a817;
+  --color-error: #d32f2f;
   
   /* Spacing Scale */
   --space-xs: 0.25rem;
