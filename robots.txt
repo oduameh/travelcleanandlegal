@@ -1,0 +1,41 @@
+# robots.txt for travelcleanandlegal.com
+# https://www.robotstxt.org/
+
+# Allow all crawlers access to public content
+User-agent: *
+Allow: /
+
+# Block admin area
+Disallow: /admin/
+Disallow: /admin
+
+# Block any backup or temporary files
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.log$
+
+# Sitemap location
+Sitemap: https://travelcleanandlegal.com/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+# Crawl-delay: 1
+
+# Specific bot rules (optional)
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (common scrapers)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Block indexing -->
+  <meta name="robots" content="noindex, nofollow">
+  
+  <title>Admin | Travel, Clean & Legal</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #1a3a2f;
+      --color-primary-light: #2d5a47;
+      --color-accent: #c4704b;
+      --color-bg: #faf8f5;
+      --color-surface: #ffffff;
+      --color-border: #e5ddd3;
+      --color-text: #2c2c2c;
+      --color-text-muted: #6b635a;
+      --color-error: #c4574b;
+      --color-success: #2d7a4f;
+      --font-body: 'Work Sans', -apple-system, sans-serif;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box {
+      background: var(--color-surface);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .login-logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .login-logo span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .login-logo h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(26, 58, 47, 0.1);
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.875rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background: var(--color-primary);
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .btn:hover {
+      background: var(--color-primary-light);
+      transform: translateY(-1px);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .error-message {
+      display: none;
+      padding: 0.75rem 1rem;
+      background: #fef2f2;
+      border: 1px solid var(--color-error);
+      border-radius: var(--radius-md);
+      color: var(--color-error);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .error-message.visible {
+      display: block;
+    }
+
+    .lockout-message {
+      display: none;
+      padding: 1rem;
+      background: #fef2f2;
+      border: 1px solid var(--color-error);
+      border-radius: var(--radius-md);
+      color: var(--color-error);
+      text-align: center;
+    }
+
+    .lockout-message.visible {
+      display: block;
+    }
+
+    .admin-panel {
+      display: none;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .admin-panel.visible {
+      display: block;
+    }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .admin-header h1 {
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+
+    .admin-card {
+      background: var(--color-surface);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 1.5rem;
+    }
+
+    .admin-card h2 {
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+
+    .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      min-height: 200px;
+      resize: vertical;
+    }
+
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(26, 58, 47, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .success-message {
+      display: none;
+      padding: 0.75rem 1rem;
+      background: #f0fdf4;
+      border: 1px solid var(--color-success);
+      border-radius: var(--radius-md);
+      color: var(--color-success);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .success-message.visible {
+      display: block;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--color-primary);
+    }
+
+    .note {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      color: #92400e;
+    }
+  </style>
+</head>
+<body>
+  <!-- Login Form -->
+  <div class="login-container" id="login-container">
+    <div class="login-box">
+      <div class="login-logo">
+        <span>✈</span>
+        <h1>Admin Login</h1>
+      </div>
+
+      <div class="error-message" id="error-message"></div>
+      <div class="lockout-message" id="lockout-message">
+        Too many failed attempts. Please try again in <span id="lockout-timer">60</span> seconds.
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            class="form-input" 
+            required
+            autocomplete="username"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-input" 
+            required
+            autocomplete="current-password"
+          >
+        </div>
+
+        <button type="submit" class="btn" id="login-btn">Login</button>
+      </form>
+
+      <a href="/" class="back-link">← Back to site</a>
+    </div>
+  </div>
+
+  <!-- Admin Panel (shown after login) -->
+  <div class="admin-panel" id="admin-panel">
+    <div class="admin-header">
+      <h1>Content Management</h1>
+      <button class="btn btn-secondary" id="logout-btn" style="width: auto; padding: 0.5rem 1rem;">
+        Logout
+      </button>
+    </div>
+
+    <div class="note">
+      <strong>Note:</strong> This is a demo admin interface. For production use, integrate with a 
+      headless CMS (Contentful, Sanity, Strapi) or backend service. Generated content would need 
+      to be saved to your hosting platform.
+    </div>
+
+    <div class="admin-card">
+      <h2>Create New Article</h2>
+      
+      <div class="success-message" id="article-success">
+        Article data generated! Copy the HTML below to create your article file.
+      </div>
+
+      <form id="article-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="article-title" class="form-label">Title</label>
+            <input type="text" id="article-title" class="form-input" required placeholder="Article Title">
+          </div>
+          <div class="form-group">
+            <label for="article-slug" class="form-label">URL Slug</label>
+            <input type="text" id="article-slug" class="form-input" required placeholder="article-url-slug">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="article-description" class="form-label">Meta Description (150-160 chars)</label>
+          <input type="text" id="article-description" class="form-input" required maxlength="160" placeholder="Brief description for search engines">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="article-category" class="form-label">Category</label>
+            <select id="article-category" class="form-input" required>
+              <option value="">Select category...</option>
+              <option value="travel">Travel</option>
+              <option value="lifestyle">Lifestyle</option>
+              <option value="guides">Guides</option>
+              <option value="tips">Tips</option>
+              <option value="legal">Legal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="article-author" class="form-label">Author</label>
+            <input type="text" id="article-author" class="form-input" required placeholder="Author Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="article-image" class="form-label">Featured Image URL</label>
+          <input type="url" id="article-image" class="form-input" required placeholder="https://images.unsplash.com/...">
+        </div>
+
+        <div class="form-group">
+          <label for="article-content" class="form-label">Article Content (HTML)</label>
+          <textarea id="article-content" class="form-textarea" required placeholder="<p>Your article content here...</p>
+
+<h2>Section Heading</h2>
+<p>More content...</p>"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Generate Article HTML</button>
+      </form>
+    </div>
+
+    <div class="admin-card" id="generated-output" style="display: none;">
+      <h2>Generated Article HTML</h2>
+      <p style="margin-bottom: 1rem; color: var(--color-text-muted);">
+        Copy this HTML and save it as <code id="output-filename">/posts/your-slug.html</code>
+      </p>
+      <textarea id="output-html" class="form-textarea" style="min-height: 400px; font-family: monospace; font-size: 0.8125rem;" readonly></textarea>
+      <button class="btn" style="margin-top: 1rem;" onclick="copyOutput()">Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <script>
+    // ================================================
+    // IMPORTANT: Change these credentials before deployment!
+    // In production, use proper authentication (OAuth, JWT, etc.)
+    // ================================================
+    const ADMIN_USERNAME = 'admin';
+    const ADMIN_PASSWORD_HASH = 'hashed_password_here'; // Replace with actual hash
+    
+    // For demo purposes, using simple comparison (NOT SECURE FOR PRODUCTION)
+    const DEMO_PASSWORD = '08081834353';
+
+    // Rate limiting
+    const MAX_ATTEMPTS = 5;
+    const LOCKOUT_TIME = 60; // seconds
+    let attempts = parseInt(localStorage.getItem('admin_attempts') || '0');
+    let lockoutEnd = parseInt(localStorage.getItem('admin_lockout') || '0');
+
+    const loginContainer = document.getElementById('login-container');
+    const adminPanel = document.getElementById('admin-panel');
+    const loginForm = document.getElementById('login-form');
+    const errorMessage = document.getElementById('error-message');
+    const lockoutMessage = document.getElementById('lockout-message');
+    const lockoutTimer = document.getElementById('lockout-timer');
+    const logoutBtn = document.getElementById('logout-btn');
+    const articleForm = document.getElementById('article-form');
+
+    // Check if already logged in
+    const session = sessionStorage.getItem('admin_session');
+    if (session === 'active') {
+      showAdminPanel();
+    }
+
+    // Check lockout on load
+    checkLockout();
+
+    function checkLockout() {
+      const now = Date.now();
+      if (lockoutEnd > now) {
+        showLockout();
+      } else if (lockoutEnd > 0) {
+        // Lockout expired, reset
+        localStorage.removeItem('admin_lockout');
+        localStorage.setItem('admin_attempts', '0');
+        attempts = 0;
+        lockoutEnd = 0;
+      }
+    }
+
+    function showLockout() {
+      lockoutMessage.classList.add('visible');
+      loginForm.style.display = 'none';
+      
+      const interval = setInterval(() => {
+        const remaining = Math.ceil((lockoutEnd - Date.now()) / 1000);
+        if (remaining <= 0) {
+          clearInterval(interval);
+          lockoutMessage.classList.remove('visible');
+          loginForm.style.display = 'block';
+          localStorage.removeItem('admin_lockout');
+          localStorage.setItem('admin_attempts', '0');
+          attempts = 0;
+        } else {
+          lockoutTimer.textContent = remaining;
+        }
+      }, 1000);
+    }
+
+    function showError(message) {
+      errorMessage.textContent = message;
+      errorMessage.classList.add('visible');
+    }
+
+    function hideError() {
+      errorMessage.classList.remove('visible');
+    }
+
+    function showAdminPanel() {
+      loginContainer.style.display = 'none';
+      adminPanel.classList.add('visible');
+      sessionStorage.setItem('admin_session', 'active');
+    }
+
+    function logout() {
+      sessionStorage.removeItem('admin_session');
+      adminPanel.classList.remove('visible');
+      loginContainer.style.display = 'block';
+      loginForm.reset();
+    }
+
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      hideError();
+
+      // Check lockout
+      if (lockoutEnd > Date.now()) {
+        showLockout();
+        return;
+      }
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple validation (REPLACE WITH PROPER AUTH IN PRODUCTION)
+      if (username === ADMIN_USERNAME && password === DEMO_PASSWORD) {
+        // Success
+        localStorage.setItem('admin_attempts', '0');
+        showAdminPanel();
+      } else {
+        // Failed attempt
+        attempts++;
+        localStorage.setItem('admin_attempts', attempts.toString());
+
+        if (attempts >= MAX_ATTEMPTS) {
+          // Lockout
+          lockoutEnd = Date.now() + (LOCKOUT_TIME * 1000);
+          localStorage.setItem('admin_lockout', lockoutEnd.toString());
+          showLockout();
+        } else {
+          showError(`Invalid credentials. ${MAX_ATTEMPTS - attempts} attempts remaining.`);
+        }
+      }
+    });
+
+    logoutBtn.addEventListener('click', logout);
+
+    // Article form
+    const titleInput = document.getElementById('article-title');
+    const slugInput = document.getElementById('article-slug');
+
+    titleInput.addEventListener('input', function() {
+      // Auto-generate slug from title
+      const slug = this.value
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+      slugInput.value = slug;
+    });
+
+    articleForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const title = document.getElementById('article-title').value;
+      const slug = document.getElementById('article-slug').value;
+      const description = document.getElementById('article-description').value;
+      const category = document.getElementById('article-category').value;
+      const author = document.getElementById('article-author').value;
+      const image = document.getElementById('article-image').value;
+      const content = document.getElementById('article-content').value;
+      
+      const date = new Date().toISOString().split('T')[0];
+      const formattedDate = new Date().toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+      
+      // Calculate read time (approx 200 words per minute)
+      const wordCount = content.replace(/<[^>]*>/g, '').split(/\s+/).length;
+      const readTime = Math.max(1, Math.ceil(wordCount / 200));
+
+      const html = generateArticleHTML({
+        title,
+        slug,
+        description,
+        category,
+        author,
+        image,
+        content,
+        date,
+        formattedDate,
+        readTime
+      });
+
+      document.getElementById('output-filename').textContent = `/posts/${slug}.html`;
+      document.getElementById('output-html').value = html;
+      document.getElementById('generated-output').style.display = 'block';
+      document.getElementById('article-success').classList.add('visible');
+      
+      // Scroll to output
+      document.getElementById('generated-output').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    function generateArticleHTML(data) {
+      return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${data.title} | Travel, Clean & Legal</title>
+  <meta name="description" content="${data.description}">
+  <meta name="author" content="${data.author}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://travelcleanandlegal.com/posts/${data.slug}.html">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${data.title}">
+  <meta property="og:description" content="${data.description}">
+  <meta property="og:image" content="${data.image}">
+  <meta property="article:published_time" content="${data.date}">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <span class="header__logo-icon">✈</span>
+        <span>Travel, Clean & Legal</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list" id="nav-menu">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/blog.html" class="nav__link nav__link--active">Blog</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+          <li><a href="/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="container">
+      <header class="article__header">
+        <a href="/blog.html?category=${data.category}" class="article__category">${data.category.charAt(0).toUpperCase() + data.category.slice(1)}</a>
+        <h1 class="article__title">${data.title}</h1>
+        <div class="article__meta">
+          <span class="article__meta-item">${data.author}</span>
+          <span class="article__meta-item">${data.formattedDate}</span>
+          <span class="article__meta-item">${data.readTime} min read</span>
+        </div>
+      </header>
+
+      <img src="${data.image}" alt="${data.title}" class="article__featured-image">
+
+      <div class="ad-container ad-container--safe">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-slot"><span>Ad Space</span></div>
+      </div>
+
+      <div class="article__content">
+        ${data.content}
+      </div>
+
+      <div class="ad-container ad-container--safe">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-slot"><span>Ad Space</span></div>
+      </div>
+
+      <div class="author-box">
+        <div class="author-box__info">
+          <h4>${data.author}</h4>
+          <p class="author-box__bio">Contributing writer at Travel, Clean & Legal.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 Travel, Clean & Legal. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>`;
+    }
+
+    function copyOutput() {
+      const output = document.getElementById('output-html');
+      output.select();
+      document.execCommand('copy');
+      alert('HTML copied to clipboard!');
+    }
+  </script>
+</body>
+</html>
+
