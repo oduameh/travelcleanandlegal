@@ -1,4 +1,4 @@
-# robots.txt for travelcleanandlegal.com
+# robots.txt for travelcleanandlegal.live
 # https://www.robotstxt.org/
 
 # Allow all crawlers access to public content
@@ -15,7 +15,7 @@ Disallow: /*.tmp$
 Disallow: /*.log$
 
 # Sitemap location
-Sitemap: https://travelcleanandlegal.com/sitemap.xml
+Sitemap: https://travelcleanandlegal.live/sitemap.xml
 
 # Crawl-delay (optional - helps prevent server overload)
 # Crawl-delay: 1
