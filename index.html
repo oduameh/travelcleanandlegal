@@ -112,16 +112,6 @@
     </div>
   </section>
 
-  <!-- Ad Slot #1 - Delayed Load (5 seconds) -->
-  <div class="container">
-    <div class="ad-container ad-container--safe" id="ad-slot-hero">
-      <span class="ad-label">Advertisement</span>
-      <div class="ad-slot ad-hidden" id="ad-unit-1">
-        <span>Ad loading...</span>
-      </div>
-    </div>
-  </div>
-
   <!-- Popular Destinations -->
   <section class="section">
     <div class="container">
@@ -205,16 +195,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Ad Slot #2 - Between Sections -->
-  <div class="container">
-    <div class="ad-container ad-container--safe" id="ad-slot-mid">
-      <span class="ad-label">Advertisement</span>
-      <div class="ad-slot" id="ad-unit-2">
-        <span>Ad Space</span>
-      </div>
-    </div>
-  </div>
 
   <!-- Essential Guides Section -->
   <section class="section section--alt">
@@ -490,15 +470,6 @@
         }
         localStorage.setItem('newsletter_last_submit', now.toString());
       });
-    }
-
-    // Delayed ad loading
-    const delayedAdSlot = document.getElementById('ad-unit-1');
-    if (delayedAdSlot) {
-      setTimeout(() => {
-        delayedAdSlot.classList.remove('ad-hidden');
-        delayedAdSlot.classList.add('ad-visible');
-      }, 5000);
     }
 
     // Track scroll depth
