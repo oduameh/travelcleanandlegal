@@ -4,6 +4,7 @@
 # Allow all crawlers access to public content
 User-agent: *
 Allow: /
+Allow: /ads.txt
 
 # Block admin area
 Disallow: /admin/
